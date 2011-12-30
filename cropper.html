@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>cropper</title>
+  </head>
+  <body>
+    <h1>cropper</h1>
+    <p id="status1">loading...</p>
+    <p id="status2">.</p>
+    <p id="status3">.</p>
+    <p id="status4">.</p>
+    <p id="status5">.</p>
+    
+    <input type="hidden" id="cropperCropWidth" value="150" />
+    <input type="hidden" id="cropperCropHeight" value="150" />
+    <input type="hidden" id="cropperImageWidth" value="0" />
+    <input type="hidden" id="cropperImageHeight" value="0" />
+    <input type="hidden" id="cropperXOffset" value="0" />
+    <input type="hidden" id="cropperYOffset" value="0" />
+    <input type="hidden" id="cropperZoom" value="35" />
+    
+    <input type="hidden" id="cropperImageUrl" value="http://pix-eu.dontstayin.com/9973f219-3a79-467d-bf9c-35e261a7ad23.jpg" />
+    <input type="hidden" id="cropperImageOriginalWidth" value="1000" />
+    <input type="hidden" id="cropperImageOriginalHeight" value="733" />
+    <input type="hidden" id="cropperAllowCustomHeight" value="true" />
+    <input type="hidden" id="cropperAllowCustomWidth" value="true" />
+    <input type="hidden" id="cropperMaxWidth" value="200" />
+    <input type="hidden" id="cropperMaxHeight" value="200" />
+    <input type="hidden" id="cropperMinWidth" value="100" />
+    <input type="hidden" id="cropperMinHeight" value="100" />
+    
+    
+    
+    
+    <div id="cropperMain" style="display:none; position:relative; width:600px; height:400px; overflow:hidden; background-color:#000000;">
+    	<img id="cropperImage" style="position:absolute; z-index:1;" />
+    	<canvas id="cropperCanvas" width="600" height="400" style="position:absolute; top:0px; left:0px; width:600px; height:400px; z-index:2;" />
+    </div>
+    <div style="position:relative; margin-top:10px;">
+    	<input id="cropperSlider" type="range" max="100" value="50" style="position:absolute; width:300px; left:150px; z-index:3;  " />
+    </div>
+    
+  
+    <script type="text/javascript" src="cropper.dart.app.js"></script>
+    
+  </body>
+</html>
