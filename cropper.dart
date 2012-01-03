@@ -28,8 +28,6 @@ class cropper {
     
     CropWidth = getInt('cCropWidth');
     CropHeight = getInt('cCropHeight');
-    //ZoomedImageWidth = getInt('cZoomedImageWidth');
-    //ZoomedImageHeight = getInt('cZoomedImageHeight');
     XOffset = getInt('cXOffset');
     YOffset = getInt('cYOffset');
     Zoom = getDouble('cZoom');
@@ -319,9 +317,6 @@ class cropper {
   
   void updateImage()
   {
-    
-    //if (Image.src != ImageUrl)
-      
     
     Image.width = (ImageWidth * Zoom / 100.0).toInt();
     Image.height = (ImageHeight * Zoom / 100.0).toInt();
