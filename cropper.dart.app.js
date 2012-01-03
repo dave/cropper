@@ -5608,13 +5608,6 @@ function native__HTMLDocumentWrappingImplementation__clear(_this) {
     throw __dom_wrap_exception(e);
   }
 }
-function native__HTMLElementWrappingImplementation__set_innerHTML(_this, value) {
-  try {
-    _this.$dom.innerHTML = __dom_unwrap(value);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
 function native__HTMLEmbedElementWrappingImplementation__get_height(_this) {
   try {
     return __dom_wrap(_this.$dom.height);
@@ -28307,14 +28300,6 @@ _HTMLElementWrappingImplementation$Dart.create__HTMLElementWrappingImplementatio
 function native__HTMLElementWrappingImplementation_create__HTMLElementWrappingImplementation(){
   return _HTMLElementWrappingImplementation$Dart.create__HTMLElementWrappingImplementation$member();
 }
-_HTMLElementWrappingImplementation$Dart.prototype.innerHTML$setter = function(value){
-  _HTMLElementWrappingImplementation$Dart._set_innerHTML$$member_(this, value);
-}
-;
-_HTMLElementWrappingImplementation$Dart._set_innerHTML$$member_ = function(_this, value){
-  return native__HTMLElementWrappingImplementation__set_innerHTML(_this, value);
-}
-;
 _HTMLElementWrappingImplementation$Dart.prototype.typeName$getter = function(){
   return 'HTMLElement';
 }
@@ -49494,11 +49479,6 @@ htmlimpl0a8e4b$ElementWrappingImplementation$Dart.ElementWrappingImplementation$
   return tmp$0;
 }
 ;
-htmlimpl0a8e4b$ElementWrappingImplementation$Dart.prototype.innerHTML$setter = function(value){
-  var tmp$0;
-  this._ptr$htmlimpl0a8e4b$$getter_().innerHTML$setter(tmp$0 = value) , tmp$0;
-}
-;
 htmlimpl0a8e4b$ElementWrappingImplementation$Dart.prototype.style$getter = function(){
   return htmlimpl0a8e4b$LevelDom$Dart.wrapCSSStyleDeclaration$member(this._ptr$htmlimpl0a8e4b$$getter_().style$getter());
 }
@@ -59705,6 +59685,7 @@ unnamedb1a3eb$cropper$Dart.$Initializer = function(){
   this.AllowCustomWidth$field = false;
   this.MinHeight$field = 0;
   this.MainHeight$field = 0;
+  this.ControlPrefix$field = '';
   this.DraggingHeightHandle$field = false;
 }
 ;
@@ -59732,16 +59713,8 @@ unnamedb1a3eb$cropper$Dart.prototype.CropHeight$setter = function(tmp$0){
   this.CropHeight$field = tmp$0;
 }
 ;
-unnamedb1a3eb$cropper$Dart.prototype.ImageWidth$getter = function(){
-  return this.ImageWidth$field;
-}
-;
 unnamedb1a3eb$cropper$Dart.prototype.ImageWidth$setter = function(tmp$0){
   this.ImageWidth$field = tmp$0;
-}
-;
-unnamedb1a3eb$cropper$Dart.prototype.ImageHeight$getter = function(){
-  return this.ImageHeight$field;
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.ImageHeight$setter = function(tmp$0){
@@ -59900,6 +59873,14 @@ unnamedb1a3eb$cropper$Dart.prototype.MainHeight$setter = function(tmp$0){
   this.MainHeight$field = tmp$0;
 }
 ;
+unnamedb1a3eb$cropper$Dart.prototype.ControlPrefix$getter = function(){
+  return this.ControlPrefix$field;
+}
+;
+unnamedb1a3eb$cropper$Dart.prototype.ControlPrefix$setter = function(tmp$0){
+  this.ControlPrefix$field = tmp$0;
+}
+;
 unnamedb1a3eb$cropper$Dart.prototype.ImageArea$getter = function(){
   return this.ImageArea$field;
 }
@@ -59963,39 +59944,38 @@ function unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named$named_$lookupRTT
   return RTT.createFunction([htmld071c1$ElementRect$Dart.$lookupRTT()], RTT.dynamicType);
 }
 unnamedb1a3eb$cropper$Dart.prototype.init$member = function(){
-  var tmp$20, tmp$24, tmp$23, tmp$22, tmp$21, tmp$9, tmp$25, tmp$26, tmp$5, tmp$6, tmp$7, tmp$8, tmp$1, tmp$2, tmp$3, tmp$4, tmp$0, tmp$11, tmp$10, tmp$13, tmp$12, tmp$14, tmp$15, tmp$16, tmp$17, tmp$18, tmp$19;
-  this.CropWidth$setter(tmp$0 = this.getInt$member('CropWidth')) , tmp$0;
-  this.CropHeight$setter(tmp$1 = this.getInt$member('CropHeight')) , tmp$1;
-  this.ImageWidth$setter(tmp$2 = this.getInt$member('ImageWidth')) , tmp$2;
-  this.ImageHeight$setter(tmp$3 = this.getInt$member('ImageHeight')) , tmp$3;
-  this.XOffset$setter(tmp$4 = this.getInt$member('XOffset')) , tmp$4;
-  this.YOffset$setter(tmp$5 = this.getInt$member('YOffset')) , tmp$5;
-  this.Zoom$setter(tmp$6 = this.getDouble$member('Zoom')) , tmp$6;
-  this.ImageUrl$setter(tmp$7 = this.getString$member('ImageUrl')) , tmp$7;
-  this.ImageOriginalWidth$setter(tmp$8 = this.getInt$member('ImageOriginalWidth')) , tmp$8;
-  this.ImageOriginalHeight$setter(tmp$9 = this.getInt$member('ImageOriginalHeight')) , tmp$9;
-  this.AllowCustomHeight$setter(tmp$10 = this.getBool$member('AllowCustomHeight')) , tmp$10;
-  this.AllowCustomWidth$setter(tmp$11 = this.getBool$member('AllowCustomWidth')) , tmp$11;
-  this.MaxWidth$setter(tmp$12 = this.getInt$member('MaxWidth')) , tmp$12;
-  this.MaxHeight$setter(tmp$13 = this.getInt$member('MaxHeight')) , tmp$13;
-  this.MinWidth$setter(tmp$14 = this.getInt$member('MinWidth')) , tmp$14;
-  this.MinHeight$setter(tmp$15 = this.getInt$member('MinHeight')) , tmp$15;
-  htmld071c1$document$getter().query$named(1, $noargs, '#status1').innerHTML$setter(tmp$16 = 'CropWidth: ' + $toString(this.CropWidth$getter()) + ', CropHeight: ' + $toString(this.CropHeight$getter()) + ', ImageWidth: ' + $toString(this.ImageWidth$getter()) + ', ImageHeight: ' + $toString(this.ImageHeight$getter()) + ', XOffset: ' + $toString(this.XOffset$getter()) + ', YOffset: ' + $toString(this.YOffset$getter()) + ', Zoom: ' + $toString(this.Zoom$getter()) + '') , tmp$16;
-  htmld071c1$document$getter().query$named(1, $noargs, '#status2').innerHTML$setter(tmp$17 = 'ImageUrl: ' + $toString(this.ImageUrl$getter()) + '') , tmp$17;
-  htmld071c1$document$getter().query$named(1, $noargs, '#status3').innerHTML$setter(tmp$18 = 'AllowCustomHeight: ' + $toString(this.AllowCustomHeight$getter()) + ', AllowCustomWidth: ' + $toString(this.AllowCustomWidth$getter()) + ', MaxWidth: ' + $toString(this.MaxWidth$getter()) + ', MaxHeight: ' + $toString(this.MaxHeight$getter()) + ', MinWidth: ' + $toString(this.MinWidth$getter()) + ', MinHeight: ' + $toString(this.MinHeight$getter()) + '') , tmp$18;
-  this.Slider$setter(tmp$19 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperSlider')) , tmp$19;
-  this.Slider$getter().value$setter(tmp$20 = this.Zoom$getter().toString$named(0, $noargs)) , tmp$20;
+  var tmp$20, tmp$24, tmp$23, tmp$22, tmp$21, tmp$9, tmp$5, tmp$6, tmp$7, tmp$8, tmp$1, tmp$2, tmp$3, tmp$4, tmp$0, tmp$11, tmp$10, tmp$13, tmp$12, tmp$14, tmp$15, tmp$16, tmp$17, tmp$18, tmp$19;
+  var controlPrefixHidden = htmld071c1$document$getter().query$named(1, $noargs, '#cropperControlPrefix');
+  this.ControlPrefix$setter(tmp$0 = controlPrefixHidden.value$getter()) , tmp$0;
+  this.CropWidth$setter(tmp$1 = this.getInt$member('CropWidth')) , tmp$1;
+  this.CropHeight$setter(tmp$2 = this.getInt$member('CropHeight')) , tmp$2;
+  this.ImageWidth$setter(tmp$3 = this.getInt$member('ImageWidth')) , tmp$3;
+  this.ImageHeight$setter(tmp$4 = this.getInt$member('ImageHeight')) , tmp$4;
+  this.XOffset$setter(tmp$5 = this.getInt$member('XOffset')) , tmp$5;
+  this.YOffset$setter(tmp$6 = this.getInt$member('YOffset')) , tmp$6;
+  this.Zoom$setter(tmp$7 = this.getDouble$member('Zoom')) , tmp$7;
+  this.ImageUrl$setter(tmp$8 = this.getString$member('ImageUrl')) , tmp$8;
+  this.ImageOriginalWidth$setter(tmp$9 = this.getInt$member('ImageOriginalWidth')) , tmp$9;
+  this.ImageOriginalHeight$setter(tmp$10 = this.getInt$member('ImageOriginalHeight')) , tmp$10;
+  this.AllowCustomHeight$setter(tmp$11 = this.getBool$member('AllowCustomHeight')) , tmp$11;
+  this.AllowCustomWidth$setter(tmp$12 = this.getBool$member('AllowCustomWidth')) , tmp$12;
+  this.MaxWidth$setter(tmp$13 = this.getInt$member('MaxWidth')) , tmp$13;
+  this.MaxHeight$setter(tmp$14 = this.getInt$member('MaxHeight')) , tmp$14;
+  this.MinWidth$setter(tmp$15 = this.getInt$member('MinWidth')) , tmp$15;
+  this.MinHeight$setter(tmp$16 = this.getInt$member('MinHeight')) , tmp$16;
+  this.Slider$setter(tmp$17 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperSlider')) , tmp$17;
+  this.Slider$getter().value$setter(tmp$18 = this.Zoom$getter().toString$named(0, $noargs)) , tmp$18;
   this.Slider$getter().on$getter().change$getter().add$named(2, $noargs, $bind(unnamedb1a3eb$cropper$Dart$init$c0$26_26$Hoisted$named, unnamedb1a3eb$cropper$Dart$init$c0$26_26$Hoisted$named$named_$lookupRTT, this), true);
-  this.Image$setter(tmp$21 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperImage')) , tmp$21;
-  this.Main$setter(tmp$22 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperMain')) , tmp$22;
-  this.Canvas$setter(tmp$23 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperCanvas')) , tmp$23;
-  this.Ctx$setter(tmp$24 = this.Canvas$getter().getContext$named(1, $noargs, '2d')) , tmp$24;
+  this.Image$setter(tmp$19 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperImage')) , tmp$19;
+  this.Main$setter(tmp$20 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperMain')) , tmp$20;
+  this.Canvas$setter(tmp$21 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperCanvas')) , tmp$21;
+  this.Ctx$setter(tmp$22 = this.Canvas$getter().getContext$named(1, $noargs, '2d')) , tmp$22;
   this.Canvas$getter().on$getter().mouseMove$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseMove$named, unnamedb1a3eb$cropper$Dart.prototype.mouseMove$named_$lookupRTT, this));
   this.Canvas$getter().on$getter().mouseDown$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseDown$named, unnamedb1a3eb$cropper$Dart.prototype.mouseDown$named_$lookupRTT, this));
   this.Canvas$getter().on$getter().mouseUp$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named, unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named_$lookupRTT, this));
   this.Canvas$getter().on$getter().mouseOut$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named, unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named_$lookupRTT, this));
-  this.Canvas$getter().style$getter().cursor$setter(tmp$25 = 'move') , tmp$25;
-  this.Main$getter().style$getter().display$setter(tmp$26 = '') , tmp$26;
+  this.Canvas$getter().style$getter().cursor$setter(tmp$23 = 'move') , tmp$23;
+  this.Main$getter().style$getter().display$setter(tmp$24 = '') , tmp$24;
   this.Main$getter().rect$getter().then$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named, unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named$named_$lookupRTT, this));
 }
 ;
@@ -60104,50 +60084,49 @@ unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named_$lookupRTT = function(){
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.mouseMove$member = function(e){
-  var tmp$9, tmp$5, tmp$6, tmp$7, tmp$8, tmp$1, tmp$2, tmp$3, tmp$4, tmp$0;
+  var tmp$5, tmp$6, tmp$7, tmp$8, tmp$1, tmp$2, tmp$3, tmp$4, tmp$0;
   var x = e.offsetX$getter();
   var y = e.offsetY$getter();
-  htmld071c1$document$getter().query$named(1, $noargs, '#status4').innerHTML$setter(tmp$0 = 'x: ' + $toString(x) + ', y: ' + $toString(y) + ')') , tmp$0;
   var p = unnamedb1a3eb$Pixel$Dart.Pixel$$Factory(x, y);
   if (this.DraggingImage$getter() || this.DraggingCornerHandle$getter() || this.DraggingWidthHandle$getter() || this.DraggingHeightHandle$getter()) {
     var deltaX = SUB$operator(p.x$getter(), this.DraggingStart$getter().x$getter());
     var deltaY = SUB$operator(p.y$getter(), this.DraggingStart$getter().y$getter());
     if (this.DraggingCornerHandle$getter() || this.DraggingWidthHandle$getter() || this.DraggingHeightHandle$getter()) {
       if (this.DraggingCornerHandle$getter() || this.DraggingWidthHandle$getter()) {
-        this.CropWidth$setter(tmp$1 = ADD$operator(this.CropWidthAtStartOfDrag$getter(), MUL$operator(deltaX, 2))) , tmp$1;
+        this.CropWidth$setter(tmp$0 = ADD$operator(this.CropWidthAtStartOfDrag$getter(), MUL$operator(deltaX, 2))) , tmp$0;
       }
       if (this.DraggingCornerHandle$getter() || this.DraggingHeightHandle$getter()) {
-        this.CropHeight$setter(tmp$2 = ADD$operator(this.CropHeightAtStartOfDrag$getter(), MUL$operator(deltaY, 2))) , tmp$2;
+        this.CropHeight$setter(tmp$1 = ADD$operator(this.CropHeightAtStartOfDrag$getter(), MUL$operator(deltaY, 2))) , tmp$1;
       }
       this.testCropExtents$member();
       this.updateCrop$member();
     }
      else {
       if (this.DraggingImage$getter()) {
-        this.XOffset$setter(tmp$3 = ADD$operator(this.ImageXOffsetAtStartOfDrag$getter(), deltaX)) , tmp$3;
-        this.YOffset$setter(tmp$4 = ADD$operator(this.ImageYOffsetAtStartOfDrag$getter(), deltaY)) , tmp$4;
+        this.XOffset$setter(tmp$2 = ADD$operator(this.ImageXOffsetAtStartOfDrag$getter(), deltaX)) , tmp$2;
+        this.YOffset$setter(tmp$3 = ADD$operator(this.ImageYOffsetAtStartOfDrag$getter(), deltaY)) , tmp$3;
         this.testImageExtents$member();
         this.updateImage$member();
       }
     }
   }
   if (p.In$named(1, $noargs, this.CornerHandleArea$getter())) {
-    this.Canvas$getter().style$getter().cursor$setter(tmp$5 = 'se-resize') , tmp$5;
+    this.Canvas$getter().style$getter().cursor$setter(tmp$4 = 'se-resize') , tmp$4;
   }
    else {
     if (p.In$named(1, $noargs, this.WidthHandleArea$getter())) {
-      this.Canvas$getter().style$getter().cursor$setter(tmp$6 = 'e-resize') , tmp$6;
+      this.Canvas$getter().style$getter().cursor$setter(tmp$5 = 'e-resize') , tmp$5;
     }
      else {
       if (p.In$named(1, $noargs, this.HeightHandleArea$getter())) {
-        this.Canvas$getter().style$getter().cursor$setter(tmp$7 = 's-resize') , tmp$7;
+        this.Canvas$getter().style$getter().cursor$setter(tmp$6 = 's-resize') , tmp$6;
       }
        else {
         if (p.In$named(1, $noargs, this.ImageArea$getter())) {
-          this.Canvas$getter().style$getter().cursor$setter(tmp$8 = 'move') , tmp$8;
+          this.Canvas$getter().style$getter().cursor$setter(tmp$7 = 'move') , tmp$7;
         }
          else {
-          this.Canvas$getter().style$getter().cursor$setter(tmp$9 = '') , tmp$9;
+          this.Canvas$getter().style$getter().cursor$setter(tmp$8 = '') , tmp$8;
         }
       }
     }
@@ -60324,22 +60303,22 @@ unnamedb1a3eb$cropper$Dart.prototype.updateImage$member = function(){
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.getInt$member = function(name_0){
-  var i = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator('#cropper', name_0));
+  var i = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator(ADD$operator('#', this.ControlPrefix$getter()), name_0));
   return Math$Dart.parseInt$member(i.value$getter());
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.getDouble$member = function(name_0){
-  var i = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator('#cropper', name_0));
+  var i = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator(ADD$operator('#', this.ControlPrefix$getter()), name_0));
   return Math$Dart.parseDouble$member(i.value$getter());
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.getBool$member = function(name_0){
-  var i = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator('#cropper', name_0));
+  var i = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator(ADD$operator('#', this.ControlPrefix$getter()), name_0));
   return EQ$operator(i.value$getter(), 'true');
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.getString$member = function(name_0){
-  var i = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator('#cropper', name_0));
+  var i = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator(ADD$operator('#', this.ControlPrefix$getter()), name_0));
   return i.value$getter();
 }
 ;
@@ -60523,6 +60502,7 @@ isolate$inits.push(function(){
   this.AllowCustomWidth$field = false;
   this.MinHeight$field = 0;
   this.MainHeight$field = 0;
+  this.ControlPrefix$field = '';
   this.DraggingHeightHandle$field = false;
 }
 );

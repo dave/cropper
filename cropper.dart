@@ -13,6 +13,7 @@ class cropper {
   CanvasElement Canvas;
   CanvasRenderingContext2D Ctx;
   int MainWidth, MainHeight = 0;
+  String ControlPrefix = "";
   
   Area ImageArea, CropArea, CornerHandleArea, WidthHandleArea, HeightHandleArea;
   
@@ -20,7 +21,10 @@ class cropper {
   }
 
   void init() {
-
+    
+    InputElement controlPrefixHidden = document.query('#cropperControlPrefix');
+    ControlPrefix = controlPrefixHidden.value;
+    
     CropWidth = getInt('CropWidth');
     CropHeight = getInt('CropHeight');
     ImageWidth = getInt('ImageWidth');
@@ -39,9 +43,9 @@ class cropper {
     MinWidth = getInt('MinWidth');
     MinHeight = getInt('MinHeight');
     
-    document.query('#status1').innerHTML = "CropWidth: $CropWidth, CropHeight: $CropHeight, ImageWidth: $ImageWidth, ImageHeight: $ImageHeight, XOffset: $XOffset, YOffset: $YOffset, Zoom: $Zoom";
-    document.query('#status2').innerHTML = "ImageUrl: $ImageUrl";
-    document.query('#status3').innerHTML = "AllowCustomHeight: $AllowCustomHeight, AllowCustomWidth: $AllowCustomWidth, MaxWidth: $MaxWidth, MaxHeight: $MaxHeight, MinWidth: $MinWidth, MinHeight: $MinHeight";
+    //document.query('#status1').innerHTML = "CropWidth: $CropWidth, CropHeight: $CropHeight, ImageWidth: $ImageWidth, ImageHeight: $ImageHeight, XOffset: $XOffset, YOffset: $YOffset, Zoom: $Zoom";
+    //document.query('#status2').innerHTML = "ImageUrl: $ImageUrl";
+    //document.query('#status3').innerHTML = "AllowCustomHeight: $AllowCustomHeight, AllowCustomWidth: $AllowCustomWidth, MaxWidth: $MaxWidth, MaxHeight: $MaxHeight, MinWidth: $MinWidth, MinHeight: $MinHeight";
     
     Slider = document.query('#cropperSlider');
     Slider.value = Zoom.toString();
@@ -96,7 +100,7 @@ class cropper {
   {
     int x = e.offsetX;
     int y = e.offsetY;
-    document.query('#status4').innerHTML = "x: $x, y: $y)";
+    //document.query('#status4').innerHTML = "x: $x, y: $y)";
     
     Pixel p = new Pixel(x, y);
     
@@ -328,19 +332,19 @@ class cropper {
     
   }
   int getInt(String name){
-    InputElement i = document.query('#cropper'+name);
+    InputElement i = document.query('#'+ControlPrefix+name);
     return Math.parseInt(i.value);
   }
   double getDouble(String name){
-    InputElement i = document.query('#cropper'+name);
+    InputElement i = document.query('#'+ControlPrefix+name);
     return Math.parseDouble(i.value);
   }
   bool getBool(String name){
-    InputElement i = document.query('#cropper'+name);
+    InputElement i = document.query('#'+ControlPrefix+name);
     return i.value == "true";
   }
   String getString(String name){
-    InputElement i = document.query('#cropper'+name);
+    InputElement i = document.query('#'+ControlPrefix+name);
     return i.value;
   }
 
