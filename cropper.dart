@@ -2,11 +2,12 @@
 
 class cropper {
 
-  int CropWidth, CropHeight, ImageWidth, ImageHeight, XOffset, YOffset = 0;
+  int CropWidth, CropHeight, XOffset, YOffset = 0;
+  //int ZoomedImageWidth, ZoomedImageHeight = 0;
   double Zoom = 0.0;
   String ImageUrl = "";
   bool AllowCustomHeight, AllowCustomWidth = false;
-  int ImageOriginalWidth, ImageOriginalHeight, MaxWidth, MaxHeight, MinWidth, MinHeight = 0;
+  int ImageWidth, ImageHeight, MaxWidth, MaxHeight, MinWidth, MinHeight = 0;
   ImageElement Image;
   InputElement Slider;
   DivElement Main;
@@ -27,15 +28,13 @@ class cropper {
     
     CropWidth = getInt('cCropWidth');
     CropHeight = getInt('cCropHeight');
-    ImageWidth = getInt('cImageWidth');
-    ImageHeight = getInt('cImageHeight');
+    //ZoomedImageWidth = getInt('cZoomedImageWidth');
+    //ZoomedImageHeight = getInt('cZoomedImageHeight');
     XOffset = getInt('cXOffset');
     YOffset = getInt('cYOffset');
     Zoom = getDouble('cZoom');
     
     ImageUrl = getString('cImageUrl');
-    ImageOriginalWidth = getInt('cImageOriginalWidth');
-    ImageOriginalHeight = getInt('cImageOriginalHeight');
     AllowCustomHeight = getBool('cAllowCustomHeight');
     AllowCustomWidth = getBool('cAllowCustomWidth');
     MaxWidth = getInt('cMaxWidth');
@@ -74,12 +73,19 @@ class cropper {
       MainWidth = r.client.width;
       MainHeight = r.client.height;
       
-      updateImage();
-      //testImageExtents();
-      //updateImage();
+      Image.src = ImageUrl;
       
-      testCropExtents();
-      updateCrop();
+      Image.rect.then((ElementRect rImage){
+       ImageWidth = rImage.client.width;
+       ImageHeight = rImage.client.height;
+       
+       updateImage();
+       
+       testCropExtents();
+       updateCrop();
+       
+      });
+      
       
     }); 
     
@@ -201,8 +207,8 @@ class cropper {
     int minImageWidth = (((CropWidth / 2.0) + Math.max(XOffset, -XOffset).toInt()) * 2).toInt();
     int minImageHeight = (((CropHeight / 2.0) + Math.max(YOffset, -YOffset).toInt()) * 2).toInt();
     
-    double minWidthZoom = minImageWidth / ImageOriginalWidth * 100;
-    double minHeightZoom = minImageHeight / ImageOriginalHeight * 100;
+    double minWidthZoom = minImageWidth / ImageWidth * 100;
+    double minHeightZoom = minImageHeight / ImageHeight * 100;
     
     double minZoom = Math.max(minWidthZoom, minHeightZoom);
     
@@ -314,11 +320,11 @@ class cropper {
   void updateImage()
   {
     
-    if (Image.src != ImageUrl)
-      Image.src = ImageUrl;
+    //if (Image.src != ImageUrl)
+      
     
-    Image.width = (ImageOriginalWidth * Zoom / 100.0).toInt();
-    Image.height = (ImageOriginalHeight * Zoom / 100.0).toInt();
+    Image.width = (ImageWidth * Zoom / 100.0).toInt();
+    Image.height = (ImageHeight * Zoom / 100.0).toInt();
     
     int left = ((MainWidth / 2) + XOffset - (Image.width / 2)).toInt();
     int top = ((MainHeight / 2) + YOffset - (Image.height / 2)).toInt();

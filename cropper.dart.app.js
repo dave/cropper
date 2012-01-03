@@ -5622,13 +5622,6 @@ function native__HTMLEmbedElementWrappingImplementation__set_height(_this, value
     throw __dom_wrap_exception(e);
   }
 }
-function native__HTMLEmbedElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
 function native__HTMLEmbedElementWrappingImplementation__set_src(_this, value) {
   try {
     _this.$dom.src = __dom_unwrap(value);
@@ -5660,13 +5653,6 @@ function native__HTMLFormElementWrappingImplementation__get_length(_this) {
 function native__HTMLFrameElementWrappingImplementation__get_height(_this) {
   try {
     return __dom_wrap(_this.$dom.height);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
-function native__HTMLFrameElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
   } catch (e) {
     throw __dom_wrap_exception(e);
   }
@@ -5713,13 +5699,6 @@ function native__HTMLIFrameElementWrappingImplementation__set_height(_this, valu
     throw __dom_wrap_exception(e);
   }
 }
-function native__HTMLIFrameElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
 function native__HTMLIFrameElementWrappingImplementation__set_src(_this, value) {
   try {
     _this.$dom.src = __dom_unwrap(value);
@@ -5762,13 +5741,6 @@ function native__HTMLImageElementWrappingImplementation__set_height(_this, value
     throw __dom_wrap_exception(e);
   }
 }
-function native__HTMLImageElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
 function native__HTMLImageElementWrappingImplementation__set_src(_this, value) {
   try {
     _this.$dom.src = __dom_unwrap(value);
@@ -5800,13 +5772,6 @@ function native__HTMLImageElementWrappingImplementation__get_x(_this) {
 function native__HTMLImageElementWrappingImplementation__get_y(_this) {
   try {
     return __dom_wrap(_this.$dom.y);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
-function native__HTMLInputElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
   } catch (e) {
     throw __dom_wrap_exception(e);
   }
@@ -5870,13 +5835,6 @@ function native__HTMLMarqueeElementWrappingImplementation__get_width(_this) {
 function native__HTMLMarqueeElementWrappingImplementation__set_width(_this, value) {
   try {
     _this.$dom.width = __dom_unwrap(value);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
-function native__HTMLMediaElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
   } catch (e) {
     throw __dom_wrap_exception(e);
   }
@@ -6014,13 +5972,6 @@ function native__HTMLProgressElementWrappingImplementation__set_value(_this, val
     throw __dom_wrap_exception(e);
   }
 }
-function native__HTMLScriptElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
 function native__HTMLScriptElementWrappingImplementation__set_src(_this, value) {
   try {
     _this.$dom.src = __dom_unwrap(value);
@@ -6059,13 +6010,6 @@ function native__HTMLSelectElementWrappingImplementation__set_value(_this, value
 function native__HTMLSelectElementWrappingImplementation__add(_this, element, before) {
   try {
     return __dom_wrap(_this.$dom.add(__dom_unwrap(element), __dom_unwrap(before)));
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
-function native__HTMLSourceElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
   } catch (e) {
     throw __dom_wrap_exception(e);
   }
@@ -6143,13 +6087,6 @@ function native__HTMLTextAreaElementWrappingImplementation__get_value(_this) {
 function native__HTMLTextAreaElementWrappingImplementation__set_value(_this, value) {
   try {
     _this.$dom.value = __dom_unwrap(value);
-  } catch (e) {
-    throw __dom_wrap_exception(e);
-  }
-}
-function native__HTMLTrackElementWrappingImplementation__get_src(_this) {
-  try {
-    return __dom_wrap(_this.$dom.src);
   } catch (e) {
     throw __dom_wrap_exception(e);
   }
@@ -29111,16 +29048,8 @@ _HTMLEmbedElementWrappingImplementation$Dart._set_height$$member_ = function(_th
   return native__HTMLEmbedElementWrappingImplementation__set_height(_this, value);
 }
 ;
-_HTMLEmbedElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLEmbedElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLEmbedElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLEmbedElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLEmbedElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLEmbedElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLEmbedElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -29339,16 +29268,8 @@ _HTMLFrameElementWrappingImplementation$Dart._get_height$$member_ = function(_th
   return native__HTMLFrameElementWrappingImplementation__get_height(_this);
 }
 ;
-_HTMLFrameElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLFrameElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLFrameElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLFrameElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLFrameElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLFrameElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLFrameElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -29665,16 +29586,8 @@ _HTMLIFrameElementWrappingImplementation$Dart._set_height$$member_ = function(_t
   return native__HTMLIFrameElementWrappingImplementation__set_height(_this, value);
 }
 ;
-_HTMLIFrameElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLIFrameElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLIFrameElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLIFrameElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLIFrameElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLIFrameElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLIFrameElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -29770,16 +29683,8 @@ _HTMLImageElementWrappingImplementation$Dart._set_height$$member_ = function(_th
   return native__HTMLImageElementWrappingImplementation__set_height(_this, value);
 }
 ;
-_HTMLImageElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLImageElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLImageElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLImageElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLImageElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLImageElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLImageElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -29863,16 +29768,8 @@ _HTMLInputElementWrappingImplementation$Dart.create__HTMLInputElementWrappingImp
 function native__HTMLInputElementWrappingImplementation_create__HTMLInputElementWrappingImplementation(){
   return _HTMLInputElementWrappingImplementation$Dart.create__HTMLInputElementWrappingImplementation$member();
 }
-_HTMLInputElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLInputElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLInputElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLInputElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLInputElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLInputElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLInputElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -30348,16 +30245,8 @@ _HTMLMediaElementWrappingImplementation$Dart.create__HTMLMediaElementWrappingImp
 function native__HTMLMediaElementWrappingImplementation_create__HTMLMediaElementWrappingImplementation(){
   return _HTMLMediaElementWrappingImplementation$Dart.create__HTMLMediaElementWrappingImplementation$member();
 }
-_HTMLMediaElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLMediaElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLMediaElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLMediaElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLMediaElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLMediaElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLMediaElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -31212,16 +31101,8 @@ _HTMLScriptElementWrappingImplementation$Dart.create__HTMLScriptElementWrappingI
 function native__HTMLScriptElementWrappingImplementation_create__HTMLScriptElementWrappingImplementation(){
   return _HTMLScriptElementWrappingImplementation$Dart.create__HTMLScriptElementWrappingImplementation$member();
 }
-_HTMLScriptElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLScriptElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLScriptElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLScriptElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLScriptElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLScriptElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLScriptElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -31365,16 +31246,8 @@ _HTMLSourceElementWrappingImplementation$Dart.create__HTMLSourceElementWrappingI
 function native__HTMLSourceElementWrappingImplementation_create__HTMLSourceElementWrappingImplementation(){
   return _HTMLSourceElementWrappingImplementation$Dart.create__HTMLSourceElementWrappingImplementation$member();
 }
-_HTMLSourceElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLSourceElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLSourceElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLSourceElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLSourceElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLSourceElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLSourceElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -31956,16 +31829,8 @@ _HTMLTrackElementWrappingImplementation$Dart.create__HTMLTrackElementWrappingImp
 function native__HTMLTrackElementWrappingImplementation_create__HTMLTrackElementWrappingImplementation(){
   return _HTMLTrackElementWrappingImplementation$Dart.create__HTMLTrackElementWrappingImplementation$member();
 }
-_HTMLTrackElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return _HTMLTrackElementWrappingImplementation$Dart._get_src$$member_(this);
-}
-;
 _HTMLTrackElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   _HTMLTrackElementWrappingImplementation$Dart._set_src$$member_(this, value);
-}
-;
-_HTMLTrackElementWrappingImplementation$Dart._get_src$$member_ = function(_this){
-  return native__HTMLTrackElementWrappingImplementation__get_src(_this);
 }
 ;
 _HTMLTrackElementWrappingImplementation$Dart._set_src$$member_ = function(_this, value){
@@ -48194,10 +48059,6 @@ htmlimpl0a8e4b$CSSStyleDeclarationWrappingImplementation$Dart.prototype.left$set
   this.setProperty$member('left', value, '');
 }
 ;
-htmlimpl0a8e4b$CSSStyleDeclarationWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this.getPropertyValue$member('src');
-}
-;
 htmlimpl0a8e4b$CSSStyleDeclarationWrappingImplementation$Dart.prototype.src$setter = function(value){
   this.setProperty$member('src', value, '');
 }
@@ -49969,10 +49830,6 @@ htmlimpl0a8e4b$EmbedElementWrappingImplementation$Dart.prototype.height$setter =
   this._ptr$htmlimpl0a8e4b$$getter_().height$setter(tmp$0 = value) , tmp$0;
 }
 ;
-htmlimpl0a8e4b$EmbedElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this._ptr$htmlimpl0a8e4b$$getter_().src$getter();
-}
-;
 htmlimpl0a8e4b$EmbedElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   var tmp$0;
   this._ptr$htmlimpl0a8e4b$$getter_().src$setter(tmp$0 = value) , tmp$0;
@@ -50247,10 +50104,6 @@ htmlimpl0a8e4b$IFrameElementWrappingImplementation$Dart.prototype.height$setter 
   this._ptr$htmlimpl0a8e4b$$getter_().height$setter(tmp$0 = value) , tmp$0;
 }
 ;
-htmlimpl0a8e4b$IFrameElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this._ptr$htmlimpl0a8e4b$$getter_().src$getter();
-}
-;
 htmlimpl0a8e4b$IFrameElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   var tmp$0;
   this._ptr$htmlimpl0a8e4b$$getter_().src$setter(tmp$0 = value) , tmp$0;
@@ -50316,10 +50169,6 @@ htmlimpl0a8e4b$ImageElementWrappingImplementation$Dart.prototype.height$setter =
   this._ptr$htmlimpl0a8e4b$$getter_().height$setter(tmp$0 = value) , tmp$0;
 }
 ;
-htmlimpl0a8e4b$ImageElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this._ptr$htmlimpl0a8e4b$$getter_().src$getter();
-}
-;
 htmlimpl0a8e4b$ImageElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   var tmp$0;
   this._ptr$htmlimpl0a8e4b$$getter_().src$setter(tmp$0 = value) , tmp$0;
@@ -50374,10 +50223,6 @@ htmlimpl0a8e4b$InputElementWrappingImplementation$Dart.InputElementWrappingImple
   htmlimpl0a8e4b$InputElementWrappingImplementation$Dart._wrap$htmlimpl0a8e4b$$Initializer_.call(tmp$0, ptr);
   htmlimpl0a8e4b$InputElementWrappingImplementation$Dart._wrap$htmlimpl0a8e4b$$Constructor_.call(tmp$0, ptr);
   return tmp$0;
-}
-;
-htmlimpl0a8e4b$InputElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this._ptr$htmlimpl0a8e4b$$getter_().src$getter();
 }
 ;
 htmlimpl0a8e4b$InputElementWrappingImplementation$Dart.prototype.src$setter = function(value){
@@ -50691,10 +50536,6 @@ htmlimpl0a8e4b$MediaElementWrappingImplementation$Dart.MediaElementWrappingImple
   htmlimpl0a8e4b$MediaElementWrappingImplementation$Dart._wrap$htmlimpl0a8e4b$$Initializer_.call(tmp$0, ptr);
   htmlimpl0a8e4b$MediaElementWrappingImplementation$Dart._wrap$htmlimpl0a8e4b$$Constructor_.call(tmp$0, ptr);
   return tmp$0;
-}
-;
-htmlimpl0a8e4b$MediaElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this._ptr$htmlimpl0a8e4b$$getter_().src$getter();
 }
 ;
 htmlimpl0a8e4b$MediaElementWrappingImplementation$Dart.prototype.src$setter = function(value){
@@ -54750,10 +54591,6 @@ htmlimpl0a8e4b$ScriptElementWrappingImplementation$Dart.ScriptElementWrappingImp
   return tmp$0;
 }
 ;
-htmlimpl0a8e4b$ScriptElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this._ptr$htmlimpl0a8e4b$$getter_().src$getter();
-}
-;
 htmlimpl0a8e4b$ScriptElementWrappingImplementation$Dart.prototype.src$setter = function(value){
   var tmp$0;
   this._ptr$htmlimpl0a8e4b$$getter_().src$setter(tmp$0 = value) , tmp$0;
@@ -54854,10 +54691,6 @@ htmlimpl0a8e4b$SourceElementWrappingImplementation$Dart.SourceElementWrappingImp
   htmlimpl0a8e4b$SourceElementWrappingImplementation$Dart._wrap$htmlimpl0a8e4b$$Initializer_.call(tmp$0, ptr);
   htmlimpl0a8e4b$SourceElementWrappingImplementation$Dart._wrap$htmlimpl0a8e4b$$Constructor_.call(tmp$0, ptr);
   return tmp$0;
-}
-;
-htmlimpl0a8e4b$SourceElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this._ptr$htmlimpl0a8e4b$$getter_().src$getter();
 }
 ;
 htmlimpl0a8e4b$SourceElementWrappingImplementation$Dart.prototype.src$setter = function(value){
@@ -55282,10 +55115,6 @@ htmlimpl0a8e4b$TrackElementWrappingImplementation$Dart.TrackElementWrappingImple
   htmlimpl0a8e4b$TrackElementWrappingImplementation$Dart._wrap$htmlimpl0a8e4b$$Initializer_.call(tmp$0, ptr);
   htmlimpl0a8e4b$TrackElementWrappingImplementation$Dart._wrap$htmlimpl0a8e4b$$Constructor_.call(tmp$0, ptr);
   return tmp$0;
-}
-;
-htmlimpl0a8e4b$TrackElementWrappingImplementation$Dart.prototype.src$getter = function(){
-  return this._ptr$htmlimpl0a8e4b$$getter_().src$getter();
 }
 ;
 htmlimpl0a8e4b$TrackElementWrappingImplementation$Dart.prototype.src$setter = function(value){
@@ -59713,14 +59542,6 @@ unnamedb1a3eb$cropper$Dart.prototype.CropHeight$setter = function(tmp$0){
   this.CropHeight$field = tmp$0;
 }
 ;
-unnamedb1a3eb$cropper$Dart.prototype.ImageWidth$setter = function(tmp$0){
-  this.ImageWidth$field = tmp$0;
-}
-;
-unnamedb1a3eb$cropper$Dart.prototype.ImageHeight$setter = function(tmp$0){
-  this.ImageHeight$field = tmp$0;
-}
-;
 unnamedb1a3eb$cropper$Dart.prototype.XOffset$getter = function(){
   return this.XOffset$field;
 }
@@ -59769,20 +59590,20 @@ unnamedb1a3eb$cropper$Dart.prototype.AllowCustomWidth$setter = function(tmp$0){
   this.AllowCustomWidth$field = tmp$0;
 }
 ;
-unnamedb1a3eb$cropper$Dart.prototype.ImageOriginalWidth$getter = function(){
-  return this.ImageOriginalWidth$field;
+unnamedb1a3eb$cropper$Dart.prototype.ImageWidth$getter = function(){
+  return this.ImageWidth$field;
 }
 ;
-unnamedb1a3eb$cropper$Dart.prototype.ImageOriginalWidth$setter = function(tmp$0){
-  this.ImageOriginalWidth$field = tmp$0;
+unnamedb1a3eb$cropper$Dart.prototype.ImageWidth$setter = function(tmp$0){
+  this.ImageWidth$field = tmp$0;
 }
 ;
-unnamedb1a3eb$cropper$Dart.prototype.ImageOriginalHeight$getter = function(){
-  return this.ImageOriginalHeight$field;
+unnamedb1a3eb$cropper$Dart.prototype.ImageHeight$getter = function(){
+  return this.ImageHeight$field;
 }
 ;
-unnamedb1a3eb$cropper$Dart.prototype.ImageOriginalHeight$setter = function(tmp$0){
-  this.ImageOriginalHeight$field = tmp$0;
+unnamedb1a3eb$cropper$Dart.prototype.ImageHeight$setter = function(tmp$0){
+  this.ImageHeight$field = tmp$0;
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.MaxWidth$getter = function(){
@@ -59927,56 +59748,67 @@ function unnamedb1a3eb$cropper$Dart$init$c0$26_26$Hoisted$named($n, $o, event_0)
 function unnamedb1a3eb$cropper$Dart$init$c0$26_26$Hoisted$named$named_$lookupRTT(){
   return RTT.createFunction([htmld071c1$Event$Dart.$lookupRTT()], RTT.dynamicType);
 }
-function unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted(r){
+function unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted(rImage){
   var tmp$1, tmp$0;
-  this.MainWidth$setter(tmp$0 = r.client$getter().width$getter()) , tmp$0;
-  this.MainHeight$setter(tmp$1 = r.client$getter().height$getter()) , tmp$1;
+  this.ImageWidth$setter(tmp$0 = rImage.client$getter().width$getter()) , tmp$0;
+  this.ImageHeight$setter(tmp$1 = rImage.client$getter().height$getter()) , tmp$1;
   this.updateImage$member();
   this.testCropExtents$member();
   this.updateCrop$member();
 }
-function unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named($n, $o, r){
+function unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named($n, $o, rImage){
   if ($o.count || $n != 1)
     $nsme();
-  return unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted.call(this, r);
+  return unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted.call(this, rImage);
 }
 function unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named$named_$lookupRTT(){
   return RTT.createFunction([htmld071c1$ElementRect$Dart.$lookupRTT()], RTT.dynamicType);
 }
+function unnamedb1a3eb$cropper$Dart$init$c2$26_26$Hoisted(r){
+  var tmp$1, tmp$2, tmp$0;
+  this.MainWidth$setter(tmp$0 = r.client$getter().width$getter()) , tmp$0;
+  this.MainHeight$setter(tmp$1 = r.client$getter().height$getter()) , tmp$1;
+  this.Image$getter().src$setter(tmp$2 = this.ImageUrl$getter()) , tmp$2;
+  this.Image$getter().rect$getter().then$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named, unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named$named_$lookupRTT, this));
+}
+function unnamedb1a3eb$cropper$Dart$init$c2$26_26$Hoisted$named($n, $o, r){
+  if ($o.count || $n != 1)
+    $nsme();
+  return unnamedb1a3eb$cropper$Dart$init$c2$26_26$Hoisted.call(this, r);
+}
+function unnamedb1a3eb$cropper$Dart$init$c2$26_26$Hoisted$named$named_$lookupRTT(){
+  return RTT.createFunction([htmld071c1$ElementRect$Dart.$lookupRTT()], RTT.dynamicType);
+}
 unnamedb1a3eb$cropper$Dart.prototype.init$member = function(){
-  var tmp$20, tmp$24, tmp$23, tmp$22, tmp$21, tmp$9, tmp$5, tmp$6, tmp$7, tmp$8, tmp$1, tmp$2, tmp$3, tmp$4, tmp$0, tmp$11, tmp$10, tmp$13, tmp$12, tmp$14, tmp$15, tmp$16, tmp$17, tmp$18, tmp$19;
+  var tmp$20, tmp$11, tmp$10, tmp$13, tmp$12, tmp$14, tmp$9, tmp$15, tmp$16, tmp$17, tmp$18, tmp$5, tmp$19, tmp$6, tmp$7, tmp$8, tmp$1, tmp$2, tmp$3, tmp$4, tmp$0;
   var controlPrefixHidden = htmld071c1$document$getter().query$named(1, $noargs, '#cropperControlPrefix');
   this.ControlPrefix$setter(tmp$0 = controlPrefixHidden.value$getter()) , tmp$0;
   this.CropWidth$setter(tmp$1 = this.getInt$member('cCropWidth')) , tmp$1;
   this.CropHeight$setter(tmp$2 = this.getInt$member('cCropHeight')) , tmp$2;
-  this.ImageWidth$setter(tmp$3 = this.getInt$member('cImageWidth')) , tmp$3;
-  this.ImageHeight$setter(tmp$4 = this.getInt$member('cImageHeight')) , tmp$4;
-  this.XOffset$setter(tmp$5 = this.getInt$member('cXOffset')) , tmp$5;
-  this.YOffset$setter(tmp$6 = this.getInt$member('cYOffset')) , tmp$6;
-  this.Zoom$setter(tmp$7 = this.getDouble$member('cZoom')) , tmp$7;
-  this.ImageUrl$setter(tmp$8 = this.getString$member('cImageUrl')) , tmp$8;
-  this.ImageOriginalWidth$setter(tmp$9 = this.getInt$member('cImageOriginalWidth')) , tmp$9;
-  this.ImageOriginalHeight$setter(tmp$10 = this.getInt$member('cImageOriginalHeight')) , tmp$10;
-  this.AllowCustomHeight$setter(tmp$11 = this.getBool$member('cAllowCustomHeight')) , tmp$11;
-  this.AllowCustomWidth$setter(tmp$12 = this.getBool$member('cAllowCustomWidth')) , tmp$12;
-  this.MaxWidth$setter(tmp$13 = this.getInt$member('cMaxWidth')) , tmp$13;
-  this.MaxHeight$setter(tmp$14 = this.getInt$member('cMaxHeight')) , tmp$14;
-  this.MinWidth$setter(tmp$15 = this.getInt$member('cMinWidth')) , tmp$15;
-  this.MinHeight$setter(tmp$16 = this.getInt$member('cMinHeight')) , tmp$16;
-  this.Slider$setter(tmp$17 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperSlider')) , tmp$17;
-  this.Slider$getter().value$setter(tmp$18 = this.Zoom$getter().toString$named(0, $noargs)) , tmp$18;
+  this.XOffset$setter(tmp$3 = this.getInt$member('cXOffset')) , tmp$3;
+  this.YOffset$setter(tmp$4 = this.getInt$member('cYOffset')) , tmp$4;
+  this.Zoom$setter(tmp$5 = this.getDouble$member('cZoom')) , tmp$5;
+  this.ImageUrl$setter(tmp$6 = this.getString$member('cImageUrl')) , tmp$6;
+  this.AllowCustomHeight$setter(tmp$7 = this.getBool$member('cAllowCustomHeight')) , tmp$7;
+  this.AllowCustomWidth$setter(tmp$8 = this.getBool$member('cAllowCustomWidth')) , tmp$8;
+  this.MaxWidth$setter(tmp$9 = this.getInt$member('cMaxWidth')) , tmp$9;
+  this.MaxHeight$setter(tmp$10 = this.getInt$member('cMaxHeight')) , tmp$10;
+  this.MinWidth$setter(tmp$11 = this.getInt$member('cMinWidth')) , tmp$11;
+  this.MinHeight$setter(tmp$12 = this.getInt$member('cMinHeight')) , tmp$12;
+  this.Slider$setter(tmp$13 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperSlider')) , tmp$13;
+  this.Slider$getter().value$setter(tmp$14 = this.Zoom$getter().toString$named(0, $noargs)) , tmp$14;
   this.Slider$getter().on$getter().change$getter().add$named(2, $noargs, $bind(unnamedb1a3eb$cropper$Dart$init$c0$26_26$Hoisted$named, unnamedb1a3eb$cropper$Dart$init$c0$26_26$Hoisted$named$named_$lookupRTT, this), true);
-  this.Image$setter(tmp$19 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperImage')) , tmp$19;
-  this.Main$setter(tmp$20 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperMain')) , tmp$20;
-  this.Canvas$setter(tmp$21 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperCanvas')) , tmp$21;
-  this.Ctx$setter(tmp$22 = this.Canvas$getter().getContext$named(1, $noargs, '2d')) , tmp$22;
+  this.Image$setter(tmp$15 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperImage')) , tmp$15;
+  this.Main$setter(tmp$16 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperMain')) , tmp$16;
+  this.Canvas$setter(tmp$17 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperCanvas')) , tmp$17;
+  this.Ctx$setter(tmp$18 = this.Canvas$getter().getContext$named(1, $noargs, '2d')) , tmp$18;
   this.Canvas$getter().on$getter().mouseMove$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseMove$named, unnamedb1a3eb$cropper$Dart.prototype.mouseMove$named_$lookupRTT, this));
   this.Canvas$getter().on$getter().mouseDown$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseDown$named, unnamedb1a3eb$cropper$Dart.prototype.mouseDown$named_$lookupRTT, this));
   this.Canvas$getter().on$getter().mouseUp$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named, unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named_$lookupRTT, this));
   this.Canvas$getter().on$getter().mouseOut$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named, unnamedb1a3eb$cropper$Dart.prototype.mouseUpOut$named_$lookupRTT, this));
-  this.Canvas$getter().style$getter().cursor$setter(tmp$23 = 'move') , tmp$23;
-  this.Main$getter().style$getter().display$setter(tmp$24 = '') , tmp$24;
-  this.Main$getter().rect$getter().then$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named, unnamedb1a3eb$cropper$Dart$init$c1$26_26$Hoisted$named$named_$lookupRTT, this));
+  this.Canvas$getter().style$getter().cursor$setter(tmp$19 = 'move') , tmp$19;
+  this.Main$getter().style$getter().display$setter(tmp$20 = '') , tmp$20;
+  this.Main$getter().rect$getter().then$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart$init$c2$26_26$Hoisted$named, unnamedb1a3eb$cropper$Dart$init$c2$26_26$Hoisted$named$named_$lookupRTT, this));
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.init$named = function($n, $o){
@@ -60193,8 +60025,8 @@ unnamedb1a3eb$cropper$Dart.prototype.testZoomExtents$member = function(){
   var tmp$1, tmp$0;
   var minImageWidth = MUL$operator(ADD$operator(DIV$operator(this.CropWidth$getter(), 2), Math$Dart.max$member(this.XOffset$getter(), negate$operator(this.XOffset$getter())).toInt$named(0, $noargs)), 2).toInt$named(0, $noargs);
   var minImageHeight = MUL$operator(ADD$operator(DIV$operator(this.CropHeight$getter(), 2), Math$Dart.max$member(this.YOffset$getter(), negate$operator(this.YOffset$getter())).toInt$named(0, $noargs)), 2).toInt$named(0, $noargs);
-  var minWidthZoom = MUL$operator(DIV$operator(minImageWidth, this.ImageOriginalWidth$getter()), 100);
-  var minHeightZoom = MUL$operator(DIV$operator(minImageHeight, this.ImageOriginalHeight$getter()), 100);
+  var minWidthZoom = MUL$operator(DIV$operator(minImageWidth, this.ImageWidth$getter()), 100);
+  var minHeightZoom = MUL$operator(DIV$operator(minImageHeight, this.ImageHeight$getter()), 100);
   var minZoom = Math$Dart.max$member(minWidthZoom, minHeightZoom);
   if (LT$operator(this.Zoom$getter(), minZoom)) {
     this.Slider$getter().value$setter(tmp$0 = minZoom.ceil$named(0, $noargs).toInt$named(0, $noargs).toString$named(0, $noargs)) , tmp$0;
@@ -60288,18 +60120,15 @@ unnamedb1a3eb$cropper$Dart.prototype.updateCrop$member = function(){
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.updateImage$member = function(){
-  var tmp$5, tmp$6, tmp$1, tmp$2, tmp$3, tmp$4, tmp$0;
-  if (NE$operator(this.Image$getter().src$getter(), this.ImageUrl$getter())) {
-    this.Image$getter().src$setter(tmp$0 = this.ImageUrl$getter()) , tmp$0;
-  }
-  this.Image$getter().width$setter(tmp$1 = DIV$operator(MUL$operator(this.ImageOriginalWidth$getter(), this.Zoom$getter()), 100).toInt$named(0, $noargs)) , tmp$1;
-  this.Image$getter().height$setter(tmp$2 = DIV$operator(MUL$operator(this.ImageOriginalHeight$getter(), this.Zoom$getter()), 100).toInt$named(0, $noargs)) , tmp$2;
+  var tmp$5, tmp$1, tmp$2, tmp$3, tmp$4, tmp$0;
+  this.Image$getter().width$setter(tmp$0 = DIV$operator(MUL$operator(this.ImageWidth$getter(), this.Zoom$getter()), 100).toInt$named(0, $noargs)) , tmp$0;
+  this.Image$getter().height$setter(tmp$1 = DIV$operator(MUL$operator(this.ImageHeight$getter(), this.Zoom$getter()), 100).toInt$named(0, $noargs)) , tmp$1;
   var left = SUB$operator(ADD$operator(DIV$operator(this.MainWidth$getter(), 2), this.XOffset$getter()), DIV$operator(this.Image$getter().width$getter(), 2)).toInt$named(0, $noargs);
   var top_0 = SUB$operator(ADD$operator(DIV$operator(this.MainHeight$getter(), 2), this.YOffset$getter()), DIV$operator(this.Image$getter().height$getter(), 2)).toInt$named(0, $noargs);
-  this.ImageTopLeft$setter(tmp$3 = unnamedb1a3eb$Pixel$Dart.Pixel$$Factory(left, top_0)) , tmp$3;
-  this.Image$getter().style$getter().left$setter(tmp$4 = ADD$operator(this.ImageTopLeft$getter().x$getter().toString$named(0, $noargs), 'px')) , tmp$4;
-  this.Image$getter().style$getter().top$setter(tmp$5 = ADD$operator(this.ImageTopLeft$getter().y$getter().toString$named(0, $noargs), 'px')) , tmp$5;
-  this.ImageArea$setter(tmp$6 = unnamedb1a3eb$Area$Dart.Area$$Factory(left, top_0, this.Image$getter().width$getter(), this.Image$getter().height$getter())) , tmp$6;
+  this.ImageTopLeft$setter(tmp$2 = unnamedb1a3eb$Pixel$Dart.Pixel$$Factory(left, top_0)) , tmp$2;
+  this.Image$getter().style$getter().left$setter(tmp$3 = ADD$operator(this.ImageTopLeft$getter().x$getter().toString$named(0, $noargs), 'px')) , tmp$3;
+  this.Image$getter().style$getter().top$setter(tmp$4 = ADD$operator(this.ImageTopLeft$getter().y$getter().toString$named(0, $noargs), 'px')) , tmp$4;
+  this.ImageArea$setter(tmp$5 = unnamedb1a3eb$Area$Dart.Area$$Factory(left, top_0, this.Image$getter().width$getter(), this.Image$getter().height$getter())) , tmp$5;
 }
 ;
 unnamedb1a3eb$cropper$Dart.prototype.getInt$member = function(name_0){
