@@ -25,38 +25,38 @@ class cropper {
     InputElement controlPrefixHidden = document.query('#cropperControlPrefix');
     ControlPrefix = controlPrefixHidden.value;
     
-    CropWidth = getInt('CropWidth');
-    CropHeight = getInt('CropHeight');
-    ImageWidth = getInt('ImageWidth');
-    ImageHeight = getInt('ImageHeight');
-    XOffset = getInt('XOffset');
-    YOffset = getInt('YOffset');
-    Zoom = getDouble('Zoom');
+    CropWidth = getInt('cCropWidth');
+    CropHeight = getInt('cCropHeight');
+    ImageWidth = getInt('cImageWidth');
+    ImageHeight = getInt('cImageHeight');
+    XOffset = getInt('cXOffset');
+    YOffset = getInt('cYOffset');
+    Zoom = getDouble('cZoom');
     
-    ImageUrl = getString('ImageUrl');
-    ImageOriginalWidth = getInt('ImageOriginalWidth');
-    ImageOriginalHeight = getInt('ImageOriginalHeight');
-    AllowCustomHeight = getBool('AllowCustomHeight');
-    AllowCustomWidth = getBool('AllowCustomWidth');
-    MaxWidth = getInt('MaxWidth');
-    MaxHeight = getInt('MaxHeight');
-    MinWidth = getInt('MinWidth');
-    MinHeight = getInt('MinHeight');
+    ImageUrl = getString('cImageUrl');
+    ImageOriginalWidth = getInt('cImageOriginalWidth');
+    ImageOriginalHeight = getInt('cImageOriginalHeight');
+    AllowCustomHeight = getBool('cAllowCustomHeight');
+    AllowCustomWidth = getBool('cAllowCustomWidth');
+    MaxWidth = getInt('cMaxWidth');
+    MaxHeight = getInt('cMaxHeight');
+    MinWidth = getInt('cMinWidth');
+    MinHeight = getInt('cMinHeight');
     
     //document.query('#status1').innerHTML = "CropWidth: $CropWidth, CropHeight: $CropHeight, ImageWidth: $ImageWidth, ImageHeight: $ImageHeight, XOffset: $XOffset, YOffset: $YOffset, Zoom: $Zoom";
     //document.query('#status2').innerHTML = "ImageUrl: $ImageUrl";
     //document.query('#status3').innerHTML = "AllowCustomHeight: $AllowCustomHeight, AllowCustomWidth: $AllowCustomWidth, MaxWidth: $MaxWidth, MaxHeight: $MaxHeight, MinWidth: $MinWidth, MinHeight: $MinHeight";
     
-    Slider = document.query('#' + ControlPrefix + 'Slider');
+    Slider = document.query('#cropperSlider');
     Slider.value = Zoom.toString();
     Slider.on.change.add((Event event) {
       Zoom = Math.parseDouble(Slider.value);
       testZoomExtents();
       updateImage();
     }, true);
-    Image = document.query('#' + ControlPrefix + 'Image');
-    Main = document.query('#' + ControlPrefix + 'Main');
-    Canvas = document.query('#' + ControlPrefix + 'Canvas');
+    Image = document.query('#cropperImage');
+    Main = document.query('#cropperMain');
+    Canvas = document.query('#cropperCanvas');
     Ctx = Canvas.getContext('2d');
     
     
