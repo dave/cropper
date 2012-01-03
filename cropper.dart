@@ -47,16 +47,16 @@ class cropper {
     //document.query('#status2').innerHTML = "ImageUrl: $ImageUrl";
     //document.query('#status3').innerHTML = "AllowCustomHeight: $AllowCustomHeight, AllowCustomWidth: $AllowCustomWidth, MaxWidth: $MaxWidth, MaxHeight: $MaxHeight, MinWidth: $MinWidth, MinHeight: $MinHeight";
     
-    Slider = document.query('#cropperSlider');
+    Slider = document.query('#' + ControlPrefix + 'Slider');
     Slider.value = Zoom.toString();
-    Slider.on.change.add((Event event){
+    Slider.on.change.add((Event event) {
       Zoom = Math.parseDouble(Slider.value);
       testZoomExtents();
       updateImage();
     }, true);
-    Image = document.query('#cropperImage');
-    Main = document.query('#cropperMain');
-    Canvas = document.query('#cropperCanvas');
+    Image = document.query('#' + ControlPrefix + 'Image');
+    Main = document.query('#' + ControlPrefix + 'Main');
+    Canvas = document.query('#' + ControlPrefix + 'Canvas');
     Ctx = Canvas.getContext('2d');
     
     

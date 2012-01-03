@@ -59963,12 +59963,12 @@ unnamedb1a3eb$cropper$Dart.prototype.init$member = function(){
   this.MaxHeight$setter(tmp$14 = this.getInt$member('MaxHeight')) , tmp$14;
   this.MinWidth$setter(tmp$15 = this.getInt$member('MinWidth')) , tmp$15;
   this.MinHeight$setter(tmp$16 = this.getInt$member('MinHeight')) , tmp$16;
-  this.Slider$setter(tmp$17 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperSlider')) , tmp$17;
+  this.Slider$setter(tmp$17 = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator(ADD$operator('#', this.ControlPrefix$getter()), 'Slider'))) , tmp$17;
   this.Slider$getter().value$setter(tmp$18 = this.Zoom$getter().toString$named(0, $noargs)) , tmp$18;
   this.Slider$getter().on$getter().change$getter().add$named(2, $noargs, $bind(unnamedb1a3eb$cropper$Dart$init$c0$26_26$Hoisted$named, unnamedb1a3eb$cropper$Dart$init$c0$26_26$Hoisted$named$named_$lookupRTT, this), true);
-  this.Image$setter(tmp$19 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperImage')) , tmp$19;
-  this.Main$setter(tmp$20 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperMain')) , tmp$20;
-  this.Canvas$setter(tmp$21 = htmld071c1$document$getter().query$named(1, $noargs, '#cropperCanvas')) , tmp$21;
+  this.Image$setter(tmp$19 = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator(ADD$operator('#', this.ControlPrefix$getter()), 'Image'))) , tmp$19;
+  this.Main$setter(tmp$20 = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator(ADD$operator('#', this.ControlPrefix$getter()), 'Main'))) , tmp$20;
+  this.Canvas$setter(tmp$21 = htmld071c1$document$getter().query$named(1, $noargs, ADD$operator(ADD$operator('#', this.ControlPrefix$getter()), 'Canvas'))) , tmp$21;
   this.Ctx$setter(tmp$22 = this.Canvas$getter().getContext$named(1, $noargs, '2d')) , tmp$22;
   this.Canvas$getter().on$getter().mouseMove$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseMove$named, unnamedb1a3eb$cropper$Dart.prototype.mouseMove$named_$lookupRTT, this));
   this.Canvas$getter().on$getter().mouseDown$getter().add$named(1, $noargs, $bind(unnamedb1a3eb$cropper$Dart.prototype.mouseDown$named, unnamedb1a3eb$cropper$Dart.prototype.mouseDown$named_$lookupRTT, this));
